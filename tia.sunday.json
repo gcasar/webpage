@@ -1,7 +1,8 @@
 [
     {
-        "action": "stream",
-        "streamUrl": ["http://gcasar.si/asistentka.mp3"],
+        "action": "talk",
+        "voiceName": "Emma",
+        "text": "Hello Milutin. Good night Milutin.",
         "loop": 0
     }
 ]
