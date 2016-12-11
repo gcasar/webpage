@@ -1,7 +1,7 @@
 [
     {
         "action": "stream",
-        "streamUrl": ["http://gcasar.si/asistentka.m4a"],
+        "streamUrl": ["http://gcasar.si/asistentka.mp3"],
         "loop": 0
     }
 ]
