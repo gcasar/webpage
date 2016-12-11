@@ -2,6 +2,7 @@
     {
         "action": "talk",
         "voiceName": "Emma",
-        "text": "Hi, this is Tia. I'm calling to remind you to take your medication for Sunday morning."
+        "text": "Hi, this is Tia. I'm calling to remind you to take your medication for Sunday morning.",
+        "loop": 0
     }
 ]
