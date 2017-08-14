@@ -4,15 +4,21 @@
     <meta name="viewport" content="width=device-width">
     <title>Settlers little helper</title>
     <script type="text/javascript">
-      function onchange( what ){
-       document.findById("output")[0].innerHTML = what;
+
+      let a = document.getElementById('a');
+      let b = document.getElementById('b');
+      let c = document.getElementById('c');
+      let out = document.getElementById('output');
+      
+      function recalc(){
+        out.innerHTML = a.value+b.value+c.value;
       }
     </script>
   </head>
   <body>
-    <input type="number" name="quantity" min="2" max="12" value="6" onchange="onchange(this)">
-    <input type="number" name="quantity" min="2" max="12" value="8" onchange="onchange(this)">
-   <input type="number" name="quantity" min="2" max="12" value="5" onchange="onchange(this)">
+    <input id="a" type="number" name="quantity" min="2" max="12" value="6" onchange="recalc()">
+    <input id="b" type="number" name="quantity" min="2" max="12" value="8" onchange="recalc()">
+    <input id="c" type="number" name="quantity" min="2" max="12" value="5" onchange="recalc()">
   
     <h2 id="output">
     </h2>
