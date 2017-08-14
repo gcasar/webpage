@@ -21,11 +21,13 @@
                 ];
                  
 
-      var a,b,c, out;
+      var a,b,c, out, simple, details;
       
       const recalc = function(){
         var options = [];
-        [a.value,b.value,c.value].filter(function(e){
+        var input = [a.value,b.value,c.value];
+        if(details.checked)input = Array.from(new Set(input));//remove duplicates
+        .filter(function(e){
           return a!=7;
         }).forEach(function(e){
           console.log(V[e])
@@ -34,7 +36,7 @@
           options = options.concat(V[e])
         });
         out.innerHTML = ""+options.length+"/32 ("+(options.length/32)+")";
-        document.getElementById('details').innerHTML = options
+        details.innerHTML = options
       }
       
       const setup = function(){
@@ -42,14 +44,18 @@
         b = document.getElementById('b');
         c = document.getElementById('c');
         out = document.getElementById('output');
+        details = document.getElementById('details');
+        simple = document.getElementById('simple');
       }
       
     </script>
   </head>
   <body>
-    <input id="a" type="number" name="quantity" min="2" max="12" value="6" onchange="recalc()">
-    <input id="b" type="number" name="quantity" min="2" max="12" value="8" onchange="recalc()">
-    <input id="c" type="number" name="quantity" min="2" max="12" value="5" onchange="recalc()">
+    <input id="simple" type="checkbox" name="simple" value="Car" onchange="recalc()" checked>Remove duplicates<br>
+    
+    <input id="a" type="number" name="quantity" min="2" max="12" value="7" onchange="recalc()">
+    <input id="b" type="number" name="quantity" min="2" max="12" value="7" onchange="recalc()">
+    <input id="c" type="number" name="quantity" min="2" max="12" value="7" onchange="recalc()">
   
     <h2 id="output">
     </h2>
