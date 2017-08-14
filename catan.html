@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Settlers little helper</title>
+    <script type="text/javascript">
+      function onchange( what ){
+       document.findById("output")[0].innerHTML = what;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="number" name="quantity" min="2" max="12" value="6" onchange="onchange(this)">
+    <input type="number" name="quantity" min="2" max="12" value="8" onchange="onchange(this)">
+   <input type="number" name="quantity" min="2" max="12" value="5" onchange="onchange(this)">
+  
+    <h2 id="output">
+    </h2>
+  </body>
+</html>
