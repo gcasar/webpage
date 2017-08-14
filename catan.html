@@ -31,7 +31,7 @@
           console.log(V[e])
           console.log(options)
           console.log(e)
-          options.concat(V[e])
+          options = options.concat(V[e])
         });
         out.innerHTML = ""+options.length+"/32 ("+(options.length/32)+")";
         document.getElementById('details').innerHTML = options
