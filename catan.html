@@ -3,17 +3,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Settlers little helper</title>
-    <script type="text/javascript">
-
-      const a = document.getElementById('a');
-      const b = document.getElementById('b');
-      const c = document.getElementById('c');
-      const out = document.getElementById('output');
-      
-      const recalc = function(){
-        out.innerHTML = a.value+b.value+c.value;
-      }
-    </script>
   </head>
   <body>
     <input id="a" type="number" name="quantity" min="2" max="12" value="6" onchange="recalc()">
@@ -23,4 +12,16 @@
     <h2 id="output">
     </h2>
   </body>
+  <script type="text/javascript">
+
+      const a = document.getElementById('a');
+      const b = document.getElementById('b');
+      const c = document.getElementById('c');
+      const out = document.getElementById('output');
+      
+      const recalc = function(){
+        out.innerHTML = a.value+b.value+c.value;
+      }
+      
+  </script>
 </html>
