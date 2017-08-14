@@ -28,9 +28,9 @@
         [a.value,b.value,c.value].filter(function(e){
           return a!=7;
         }).forEach(function(e){
-          options.push(V[e])
+          options.concat(V[e])
         });
-        out.innerHTML = options
+        out.innerHTML = ""+options.length+"/32 ("+(options.length/32)+")";
       }
       
       const setup = function(){
