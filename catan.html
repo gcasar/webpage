@@ -26,7 +26,7 @@
       const recalc = function(){
         var options = [];
         var input = [a.value,b.value,c.value];
-        if(details.checked)input = Array.from(new Set(input));//remove duplicates
+        if(simple.checked)input = Array.from(new Set(input));//remove duplicates
         input.filter(function(e){
           return a!=7;
         }).forEach(function(e){
