@@ -28,9 +28,13 @@
         [a.value,b.value,c.value].filter(function(e){
           return a!=7;
         }).forEach(function(e){
+          console.log(V[e])
+          console.log(options)
+          console.log(e)
           options.concat(V[e])
         });
         out.innerHTML = ""+options.length+"/32 ("+(options.length/32)+")";
+        document.getElementById('details').innerHTML = options
       }
       
       const setup = function(){
@@ -49,6 +53,8 @@
   
     <h2 id="output">
     </h2>
+    <h3 id="details">
+    </h3>
   </body>
   <script type="text/javascript">
     setup();
