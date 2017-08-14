@@ -4,11 +4,13 @@
     <meta name="viewport" content="width=device-width">
     <title>Settlers little helper</title>
     <script type="text/javascript">
+      
+      const P = [0,0,1/32,2/32,3/32,4/32,5/32,0,5/32,4/32,3/32,2/32,1/32];
 
       var a,b,c, out;
       
       const recalc = function(){
-        out.innerHTML = a.value+b.value+c.value;
+        out.innerHTML = P[a.value]+P[b.value]+P[c.value];
       }
       
       const setup = function(){
