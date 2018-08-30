@@ -17,7 +17,7 @@ Cohen, 51, admitted eight counts on Tuesday, including tax and bank fraud, in a 
 </p>
 </body>
 <script type="text/javascript">
-const clientAlias = 'laola';
+const clientAlias = 'sportradar';
 const o = {language: 'en'};
 (function(a,b,c,d,e,f,g,h,i){a[e]||(i=a[e]=function(){(a[e].q=a[e].q||[]).push(arguments)},i.l=1*new Date,i.o=f,
     g=b.createElement(c),h=b.getElementsByTagName(c)[0],g.async=1,g.src=d,g.setAttribute("n",e),h.parentNode.insertBefore(g,h)
@@ -32,7 +32,7 @@ document.addEventListener(
         'addWidget',
         element,
         'sja.inlineOdds',
-        {matchId: 15327386}
+        {matchId: index % 2 == 1 ? undefined : window.location.hash.substr(1) || 15031315, demo: true}
       )
         );
     }
