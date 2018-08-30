@@ -26,15 +26,18 @@ const o = {language: 'en'};
 
 document.addEventListener(
     "DOMContentLoaded",
-    e => {
-        [...document.getElementsByTagName('span')].forEach( (element, index) => 
-        SIR(
-        'addWidget',
-        element,
-        'sja.inlineOdds',
-        {matchId: index % 2 == 1 ? undefined : window.location.hash.substr(1) || 15031315, demo: true}
-      )
-        );
+    function( e ) {
+        var elements = document.getElementsByTagName('span');
+        for( var i = 0; i < elements.length; i++ ) {
+            var element = elements[i];
+            var index = i;
+            SIR(
+                'addWidget',
+                element,
+                'sja.inlineOdds',
+                {matchId: index % 2 == 1 ? undefined : window.location.hash.substr(1) || 15031315, demo: true}
+            )
+        }
     }
 );
 </script>
